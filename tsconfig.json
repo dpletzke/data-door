@@ -1,10 +1,13 @@
-//init from https://github.com/benawad/node-graphql-benchmarks/blob/master/tsconfig.json
-
 {
   "compilerOptions": {
     "target": "es6",
-    "module": "commonjs",
-    "lib": ["dom", "es6", "es2017", "esnext.asynciterable"],
+    "module": "esnext",
+    "lib": [
+      "dom",
+      "es6",
+      "es2017",
+      "esnext.asynciterable"
+    ],
     "sourceMap": true,
     "outDir": "./dist",
     "moduleResolution": "node",
@@ -23,8 +26,18 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "resolveJsonModule": true,
-    "baseUrl": "."
+    "baseUrl": ".",
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
   },
-  "exclude": ["node_modules"],
-  "include": ["./lib/**/createTypeGraphQLSchema.ts"]
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "src"
+  ]
 }
