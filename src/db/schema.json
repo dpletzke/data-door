@@ -1,0 +1,162 @@
+{
+  "regions": {
+    "id": { "type": "INTEGER", "nullable": false  },
+    "name": { "type": "TEXT", "nullable": false },
+    "type": { "type": "TEXT", "nullable": false },
+    "coords": { "type": "TEXT", "nullable": false },
+    "evilness": { "type": "TEXT", "nullable": false },
+    "force_id": { "type": "TEXT", "nullable": true },
+  },
+  "underground_regions": {
+    "id": { "type": "INTEGER", "nullable": false  },
+    "name": { "type": "TEXT", "nullable": false },
+    "type": { "type": "TEXT", "nullable": false },
+    "coords": { "type": "TEXT", "nullable": false },
+    "evilness": { "type": "TEXT", "nullable": false },
+  },
+  "sites": {
+    "id": { "type": "INTEGER", "nullable": false  },
+    "name": { "type": "TEXT", "nullable": false },
+    "type": { "type": "TEXT", "nullable": false },
+    "coords": { "type": "TEXT", "nullable": false },
+    "rectangle": { "type": "TEXT", "nullable": false },
+    "structures": {
+      "type": "relation",
+      "nullable": true,
+      "structure": {
+        "local_id": { "type": "INTEGER", "nullable": false },
+        "name": { "type": "TEXT", "nullable": false },
+        "type": { "type": "TEXT", "nullable": false },
+        "subtype": { "type": "TEXT", "nullable": true },
+        "entity_id": { "type": "INTEGER", "nullable": true },
+        "worship_hfid": { "type": "INTEGER", "nullable": true },
+        "copied_artifacts": {
+          "type": "relation",
+          "nullable": true,
+          "copied_artifact": {
+            "copied_artifact_id": { "type": "INTEGER", "nullable": false }
+          }
+        }
+      }
+    },
+    "site_properties": {
+      "type": "relation",
+      "nullable": true,
+      "site_property": {
+        "id": { "type": "INTEGER", "nullable": false  },
+        "type": { "type": "TEXT", "nullable": false },
+        "owner_hfid": { "type": "INTEGER", "nullable": false },
+      }
+    }
+  },
+  "world_constructions": {},
+  "artifacts": {
+    "id": { "type": "INTEGER", "nullable": false  },
+    "name": { "type": "TEXT", "nullable": false },
+    "site_id": { "type": "INTEGER", "nullable": true },
+    "structure_local_id": { "type": "INTEGER", "nullable": true },
+    "holder_hfid": { "type": "INTEGER", "nullable": true },
+    "item": {
+      "name_string": { "type": "TEXT", "nullable": false },
+      "page_number": { "type": "INTEGER", "nullable": true },
+      "page_written_content_id": { "type": "INTEGER", "nullable": true }
+    }    
+  },
+  "historical_figures": {
+    "id": { "type": "INTEGER", "nullable": false  },
+    "name": { "type": "TEXT", "nullable": false },
+    "race": { "type": "TEXT", "nullable": false },
+    "caste": { "type": "TEXT", "nullable": false },
+    "appeared": { "type": "TEXT", "nullable": false },
+    "birth_year": { "type": "INTEGER", "nullable": false },
+    "birth_seconds": { "type": "INTEGER", "nullable": false },
+    "death_year": { "type": "INTEGER", "nullable": false },
+    "death_seconds": { "type": "INTEGER", "nullable": false },
+    "deity": { "type": "BOOLEAN", "nullable": false },
+    "associated_type": { "type": "TEXT", "nullable": false },
+    "goal": { "type": "TEXT", "nullable": true },
+    "ent_pop_id": { "type": "INTEGER", "nullable": true },
+    "spheres": {
+      "type": "relation",
+      "nullable": true,
+      "sphere": { "type": "TEXT", "nullable": false }
+    },
+    "hf_links": {
+      "type": "relation",
+      "nullable": true,
+      "hf_link": {
+        "link_type": { "type": "TEXT", "nullable": false },
+        "hfid": { "type": "INTEGER", "nullable": false },
+        "link_strength": { "type": "INTEGER", "nullable": true }
+      }
+    },
+    "entity_links": {
+      "type": "relation",
+      "nullable": true,
+      "entity_link": {
+        "link_type": { "type": "TEXT", "nullable": false },
+        "entity_id": { "type": "TEXT", "nullable": false }
+      }
+    },
+    "entity_reputations": {
+      "type": "relation",
+      "nullable": true,
+      "entity_reputation": {
+        "entity_id": { "type": "TEXT", "nullable": false },
+        "first_ageless_year": { "type": "INTEGER", "nullable": false },
+        "first_ageless_season_count": { "type": "INTEGER", "nullable": false  }
+      }
+    },
+    "entity_former_position_links": {
+      "type": "relation",
+      "nullable": true,
+      "entity_former_position_link": {
+        "position_profile_id": { "type": "INTEGER", "nullable": false },
+        "entity_id": { "type": "INTEGER", "nullable": false },
+        "start_year": { "type": "INTEGER", "nullable": false },
+        "end_year": { "type": "INTEGER", "nullable": false }
+      }
+    },
+    "site_links": {
+      "type": "relation",
+      "nullable": true,
+      "site_link" : {
+        "link_type": { "type": "TEXT", "nullable": false },
+        "site_id": { "type": "INTEGER", "nullable": false }
+      }
+    },
+    "hf_skills": {
+      "type": "relation",
+      "nullable": true,
+      "hf_skill": {
+        "skill": {"type": "TEXT", "nullable": false},
+        "total_ip": {"type": "INTEGER", "nullable": false},
+      }
+    },
+    "intrigue_plots": {
+      "type": "relation",
+      "nullable": true,
+      "intrigue_plot": {
+        "local_id": {"type": "INTEGER", "nullable": false},
+        "type": {"type": "TEXT", "nullable": false},
+        "on_hold": {"type": "BOOLEAN", "nullable": false},
+      }
+    }
+    "interaction_knowledges": {
+      "type": "relation",
+      "nullable": true,
+      "interaction_knowledge": {"type": "TEXT", "nullable": false}
+    },
+    "journey_pets": {
+      "type": "relation",
+      "nullable": true,
+      "journey_pet": {"type": "TEXT", "nullable": false}
+    }
+  },
+  "rivers": {
+    "name": { "type": "INTEGER", "nullable": false },
+    "path": { "type": "TEXT", "nullable": false },
+    "end_pos": { "type": "TEXT", "nullable": false },
+
+  } 
+}

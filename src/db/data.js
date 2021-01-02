@@ -1,5 +1,9 @@
 const fs = require('fs');
 const readline = require('readline');
+const iconv = require('iconv-lite');
+const parser = require('xml2json');
+
+const { schemaBuilder } = require('./schemaBuilder');
 
 const pathLegends = './src/db/fixtures/region1-00076-01-01-legends.xml';  
 const pathBigLegends = './src/db/fixtures/region1-00588-01-01-legends.xml';  
@@ -63,14 +67,13 @@ const pathTestJSON = './src/db/fixtures/test.json';
 //   console.log(JSON.parse(json).df_world.entities.entity[90]);
 // });
 
-// fs.readFile(pathLegends, (err, data) => {
-//   const str = iconv.decode(data, 'CP437')
-//   const json = parser.toJson(str);
-//   const { df_world } = JSON.parse(json);
-//   const { historical_event } = df_world.historical_events;
-//   // console.log(Object.keys(df_world));
-//   console.log(historical_event[historical_event.length - 1]);
-// });
+fs.readFile(pathLegends, (err, data) => {
+  const str = iconv.decode(data, 'CP437')
+  const json = parser.toJson(str);
+  const { df_world } = JSON.parse(json);
+  console.log(schemaBuilder(df_world));
+  // schemaBuilder(df_world);
+});
 
 // fs.readFile(pathBigLegends, (err, data) => {
 //   const str = iconv.decode(data, 'CP437')
