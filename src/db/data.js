@@ -1,7 +1,5 @@
 const fs = require('fs');
 const readline = require('readline');
-const expat = require('node-expat')
-const parser = new expat.Parser('UTF-8')
 
 const pathLegends = './src/db/fixtures/region1-00076-01-01-legends.xml';  
 const pathBigLegends = './src/db/fixtures/region1-00588-01-01-legends.xml';  
@@ -15,23 +13,7 @@ const pathTestJSON = './src/db/fixtures/test.json';
 //   terminal: false
 // });
 
-// parser.on('startElement', function (name, attrs) {
-//   console.log(name, attrs)
-// })
 
-// parser.on('endElement', function (name) {
-//   console.log(name)
-// })
-
-// parser.on('text', function (text) {
-//   console.log(text)
-// })
-
-// parser.on('error', function (error) {
-//   console.error(error)
-// })
-
-// parser.write('<html><head><title>Hello World</title></head><body><p>Foobar</p></body></html>')
 
 // let firstLine = '';
 // let entry;
