@@ -1,0 +1,467 @@
+{
+  "regions": {
+    "id": "number",
+    "name": "string",
+    "type": "string"
+  },
+  "underground_regions": {
+    "id": "number",
+    "type": "string",
+    "depth": "number"
+  },
+  "sites": {
+    "id": "number",
+    "type": "string",
+    "name": "string",
+    "coords": "string",
+    "rectangle": "string",
+    "structures": {
+      "structure": {
+        "local_id": "number",
+        "type": "string",
+        "name": "string"
+      }
+    },
+    "site_properties": {
+      "site_property": {
+        "id": "number",
+        "structure_id": "number",
+        "owner_hfid": "number"
+      }
+    }
+  },
+  "world_constructions": {},
+  "artifacts": {
+    "id": "number",
+    "name": "string",
+    "item": {
+      "name_string": "string",
+      "page_number": "number",
+      "page_written_content_id": "number"
+    },
+    "site_id": "number",
+    "holder_hfid": "number",
+    "structure_local_id": "number"
+  },
+  "historical_figures": {
+    "id": "number",
+    "name": "string",
+    "race": "string",
+    "caste": "string",
+    "appeared": "number",
+    "birth_year": "number",
+    "birth_seconds72": "number",
+    "death_year": "number",
+    "death_seconds72": "number",
+    "associated_type": "string",
+    "entity_link": {
+      "link_type": "string",
+      "entity_id": "number"
+    },
+    "site_link": {
+      "link_type": "string",
+      "occupation_id": "number",
+      "site_id": "number",
+      "sub_id": "number"
+    },
+    "sphere": {
+      "type": "string"
+    },
+    "hf_skill": {
+      "skill": "string",
+      "total_ip": "number"
+    },
+    "interaction_knowledge": "string",
+    "hf_link": {
+      "link_type": "string",
+      "hfid": "number",
+      "link_strength": "number"
+    },
+    "deity": "boolean",
+    "entity_former_position_link": {
+      "position_profile_id": "number",
+      "entity_id": "number",
+      "start_year": "number",
+      "end_year": "number"
+    },
+    "journey_pet": "string",
+    "goal": "string",
+    "ent_pop_id": "number",
+    "intrigue_plot": {
+      "local_id": "number",
+      "type": "string",
+      "on_hold": "boolean"
+    },
+    "entity_reputation": {
+      "entity_id": "number"
+    },
+    "active_interaction": "string",
+    "relationship_profile_hf_visual": {
+      "hf_id": "number",
+      "meet_count": "number",
+      "last_meet_year": "number",
+      "last_meet_seconds72": "number",
+      "love": "number",
+      "respect": "number",
+      "trust": "number",
+      "loyalty": "number",
+      "fear": "number"
+    },
+    "relationship_profile_hf_historical": {
+      "hf_id": "number",
+      "love": "number",
+      "respect": "number",
+      "trust": "number",
+      "loyalty": "number",
+      "fear": "number"
+    },
+    "intrigue_actor": {
+      "local_id": "number",
+      "hfid": "number",
+      "role": "string",
+      "strategy": "string"
+    },
+    "force": "boolean",
+    "entity_position_link": {
+      "position_profile_id": "number",
+      "entity_id": "number",
+      "start_year": "number"
+    },
+    "vague_relationship": {
+      "war_buddy": "boolean",
+      "hfid": "number"
+    },
+    "used_identity_id": "number",
+    "current_identity_id": "number",
+    "holds_artifact": "number",
+    "entity_squad_link": {
+      "squad_id": "number",
+      "squad_position": "number",
+      "entity_id": "number",
+      "start_year": "number"
+    },
+    "animated": "boolean",
+    "animated_string": "string",
+    "honor_entity": {
+      "entity": "number",
+      "battles": "number",
+      "kills": "number",
+      "honor_id": {
+        "type": "number"
+      }
+    },
+    "site_property": {
+      "site_id": "number",
+      "property_id": "number"
+    }
+  },
+  "entity_populations": {
+    "id": "number"
+  },
+  "entities": {
+    "id": "number",
+    "name": "string",
+    "honor": {
+      "id": "number",
+      "name": "string",
+      "gives_precedence": "number",
+      "requires_any_melee_or_ranged_skill": "boolean",
+      "required_skill_ip_total": "number",
+      "required_battles": "number",
+      "exempt_epid": "number",
+      "exempt_former_epid": "number",
+      "granted_to_everybody": "boolean",
+      "required_skill": "string"
+    }
+  },
+  "historical_events": {
+    "id": "number",
+    "year": "number",
+    "seconds72": "number",
+    "type": "string",
+    "hfid": "number",
+    "state": "string",
+    "site_id": "number",
+    "subregion_id": "number",
+    "feature_layer_id": "number",
+    "coords": "string",
+    "civ_id": "number",
+    "link": "string",
+    "position_id": "number",
+    "site_civ_id": "number",
+    "builder_hfid": "number",
+    "structure_id": "number",
+    "artifact_id": "number",
+    "unit_id": "number",
+    "hist_figure_id": "number",
+    "agreement_id": "number",
+    "occasion_id": "number",
+    "schedule_id": "number",
+    "subtype": "string",
+    "group_1_hfid": "number",
+    "group_2_hfid": "number",
+    "winner_hfid": "number",
+    "competitor_hfid": {
+      "type": "number"
+    },
+    "group_hfid": "number",
+    "return": "boolean",
+    "target_hfid": "number",
+    "snatcher_hfid": "number",
+    "hfid_target": "number",
+    "attacker_civ_id": "number",
+    "defender_civ_id": "number",
+    "attacker_general_hfid": "number",
+    "defender_general_hfid": "number",
+    "circumstance": "string",
+    "circumstance_id": "number",
+    "slayer_hfid": "number",
+    "slayer_race": "string",
+    "slayer_caste": "string",
+    "slayer_item_id": "number",
+    "slayer_shooter_item_id": "number",
+    "cause": "string",
+    "initiating_enid": "number",
+    "joining_enid": "number",
+    "changee_hfid": "number",
+    "changer_hfid": "number",
+    "old_race": "string",
+    "old_caste": "string",
+    "new_race": "string",
+    "new_caste": "string",
+    "quality": "number",
+    "woundee_hfid": "number",
+    "wounder_hfid": "number",
+    "entity_id": "number",
+    "convicter_enid": "number",
+    "fooled_hfid": "number",
+    "framer_hfid": "number",
+    "crime": "string",
+    "trickster_hfid": "number",
+    "identity_id": "number",
+    "target_enid": "number",
+    "wc_id": "number",
+    "reason": "string",
+    "reason_id": "number",
+    "convicted_hfid": "number",
+    "prison_months": "number",
+    "dispute": "string",
+    "entity_id_1": "number",
+    "entity_id_2": "number",
+    "site_id_1": "number",
+    "site_id_2": "number",
+    "secret_goal": "string",
+    "mood": "string",
+    "successful": "boolean",
+    "failed_judgment_test": "boolean",
+    "action": "string",
+    "method": "string",
+    "top_facet": "string",
+    "top_facet_rating": "number",
+    "top_facet_modifier": "number",
+    "attacker_hfid": "number",
+    "gambler_hfid": "number",
+    "old_account": "number",
+    "new_account": "number",
+    "knowledge": "string",
+    "first": "boolean",
+    "student_hfid": "number",
+    "teacher_hfid": "number",
+    "interaction": "string",
+    "corruptor_hfid": "number",
+    "top_value": "string",
+    "top_value_rating": "number",
+    "top_value_modifier": "number",
+    "ally_defense_bonus": "number",
+    "top_relationship_factor": "string",
+    "top_relationship_rating": "number",
+    "top_relationship_modifier": "number",
+    "pop_race": "number",
+    "pop_number_moved": "number",
+    "pop_srid": "number",
+    "pop_flid": "number",
+    "join_entity_id": "number",
+    "seeker_hfid": "number",
+    "relationship": "string",
+    "surveiled_convicted": "boolean",
+    "detected": "boolean",
+    "old_ab_id": "number",
+    "new_ab_id": "number",
+    "hfid1": "number",
+    "identity_id1": "number",
+    "hfid2": "number",
+    "identity_id2": "number",
+    "hf_rep_1_of_2": "string",
+    "hf_rep_2_of_1": "string",
+    "giver_hist_figure_id": "number",
+    "giver_entity_id": "number",
+    "receiver_hist_figure_id": "number",
+    "receiver_entity_id": "number",
+    "claim": "string",
+    "position_profile_id": "number",
+    "wcid": "number",
+    "master_wcid": "number",
+    "site_id1": "number",
+    "site_id2": "number",
+    "relevant_entity_id": "number",
+    "relevant_position_profile_id": "number",
+    "unit_type": "string",
+    "corruptor_seen_as": "string",
+    "target_seen_as": "string",
+    "attacker_merc_enid": "number",
+    "name_only": "boolean",
+    "honor_id": "number",
+    "situation": "string",
+    "defender_merc_enid": "number",
+    "actor_hfid": "number",
+    "new_site_civ_id": "number",
+    "new_leader_hfid": "number",
+    "resident_civ_id": "number",
+    "lure_hfid": "number",
+    "building_profile_id": "number",
+    "acquirer_hfid": "number",
+    "purchased_unowned": "boolean",
+    "inherited": "boolean",
+    "rebuilt_ruined": "boolean",
+    "hist_fig_id": "number",
+    "body_state": "string",
+    "trader_hfid": "number",
+    "trader_entity_id": "number",
+    "source_site_id": "number",
+    "dest_site_id": "number",
+    "production_zone_id": "number",
+    "allotment": "number",
+    "allotment_index": "number",
+    "account_shift": "number",
+    "new_equipment_level": "number",
+    "persecutor_hfid": "number",
+    "persecutor_enid": "number",
+    "expelled_hfid": {
+      "type": "number"
+    },
+    "shrine_amount_destroyed": "number",
+    "speaker_hfid": "number",
+    "site_hfid": "number",
+    "topic": "string",
+    "entity_1": "number",
+    "entity_2": "number",
+    "joiner_entity_id": "number",
+    "joined_entity_id": "number",
+    "leader_hfid": "number",
+    "partial_incorporation": "boolean",
+    "dest_structure_id": "number",
+    "dest_entity_id": "number",
+    "source_structure_id": "number",
+    "source_entity_id": "number",
+    "from_original": "boolean",
+    "coconspirator_bonus": "number",
+    "form_id": "number",
+    "modifier_hfid": "number",
+    "modification": "string",
+    "implicated_hfid": "number",
+    "expelled_creature": "number",
+    "expelled_pop_id": "number",
+    "expelled_number": "number",
+    "site_entity_id": "number",
+    "civ_entity_id": "number",
+    "creator_hfid": "number"
+  },
+  "historical_event_collections": {
+    "id": "number",
+    "start_year": "number",
+    "start_seconds72": "number",
+    "end_year": "number",
+    "end_seconds72": "number",
+    "eventcol": {
+      "type": "number"
+    },
+    "type": "string",
+    "civ_id": "number",
+    "occasion_id": "number",
+    "ordinal": "number",
+    "event": "number",
+    "parent_eventcol": "number",
+    "subregion_id": "number",
+    "feature_layer_id": "number",
+    "site_id": "number",
+    "coords": "string",
+    "defending_enid": "number",
+    "name": "string",
+    "aggressor_ent_id": "number",
+    "defender_ent_id": "number",
+    "war_eventcol": "number",
+    "attacking_hfid": {
+      "type": "number"
+    },
+    "individual_merc": "boolean",
+    "defending_hfid": {
+      "type": "number"
+    },
+    "attacking_squad_race": {
+      "type": "string"
+    },
+    "attacking_squad_entity_pop": {
+      "type": "number"
+    },
+    "attacking_squad_number": {
+      "type": "number"
+    },
+    "attacking_squad_deaths": {
+      "type": "number"
+    },
+    "attacking_squad_site": {
+      "type": "number"
+    },
+    "defending_squad_race": {
+      "type": "string"
+    },
+    "defending_squad_entity_pop": {
+      "type": "number"
+    },
+    "defending_squad_number": {
+      "type": "number"
+    },
+    "defending_squad_deaths": {
+      "type": "number"
+    },
+    "defending_squad_site": {
+      "type": "number"
+    },
+    "outcome": "string",
+    "attacking_enid": "number",
+    "noncom_hfid": {
+      "type": "number"
+    },
+    "attacking_merc_enid": "number",
+    "company_merc": "boolean",
+    "defending_merc_enid": "number",
+    "target_entity_id": "number",
+    "attacking_squad_animated": "boolean",
+    "defending_squad_animated": "boolean"
+  },
+  "historical_eras": {
+    "name": "string",
+    "start_year": "number"
+  },
+  "written_contents": {
+    "id": "number",
+    "title": "string",
+    "author_hfid": "number",
+    "author_roll": "number",
+    "form": "string",
+    "form_id": "number",
+    "style": "string"
+  },
+  "poetic_forms": {
+    "id": "number",
+    "description": "string"
+  },
+  "musical_forms": {
+    "id": "number",
+    "description": "string"
+  },
+  "dance_forms": {
+    "id": "number",
+    "description": "string"
+  }
+}

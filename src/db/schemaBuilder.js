@@ -8,40 +8,32 @@ const getType = (variable) => {
 }
 
 const schemaFromArray = (arr) => {
-  const schema = {};
-  
-  return arr.reduce((acc, entry) => {
-    entry = makeNumberIfPossible(entry);
-    const type = getType(entry);
 
-    if (['string', 'number'].includes(type)) {
-      return { type }
-    } else if (type === 'array') {
-      return 'This shouldn\'t happen';
-    } else if (type === 'object') {
-      for(const column in entry) {
-        if(!acc[column]) {
+  const elementType = getType(makeNumberIfPossible(arr[0]));
 
-          const data = makeNumberIfPossible(entry[column]); 
-          const type = getType(entry);
-          
-          if (['string', 'number'].includes(type)) {
-            return { type }
-          } else if (type === 'array') {
-            acc[column] = schemaFromArray(data);
-          } else {
-            acc[column] = schemaFromObject(data);
-          }
-  
-        } 
-      }
-    }
-    return acc;
-  }, {});
+  const ref = {
+    string: { type: elementType },
+    number: { type: elementType  },
+    array: 'nested arrays shouldn\'t happen',
+    object: arr.reduce((acc, entry) => {
+      if (!Object.keys(entry).length) acc = 'boolean'; 
+      else acc = {...acc, ...schemaFromObject(entry)};
+
+      return acc;
+    }, {})
+  }
+
+  return ref[elementType];
 
 }
 
+//doesn't get called often
 const schemaFromObject = (obj) => {
+
+  if (obj && !Object.keys(obj).length) {
+    return 'boolean'
+  }
+  
   const schema = {};
 
   for(const column in obj) {
@@ -51,7 +43,7 @@ const schemaFromObject = (obj) => {
       const type = getType(data);
       
       if (['string', 'number'].includes(type)) {
-        schema[column] = { type };
+        schema[column] = type;
       } else if (type === 'array') {
         schema[column] = schemaFromArray(data);
       } else {

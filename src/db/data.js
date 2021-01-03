@@ -71,8 +71,13 @@ fs.readFile(pathLegends, (err, data) => {
   const str = iconv.decode(data, 'CP437')
   const json = parser.toJson(str);
   const { df_world } = JSON.parse(json);
+  // console.log(df_world.historical_event_collections)
   console.log(schemaBuilder(df_world));
   // schemaBuilder(df_world);
+
+  fs.writeFile('./genSchema.json', JSON.stringify(schemaBuilder(df_world)), () => {
+
+  });
 });
 
 // fs.readFile(pathBigLegends, (err, data) => {
